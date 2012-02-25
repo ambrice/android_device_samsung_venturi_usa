@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_venturi_usa.mk
+    $(LOCAL_DIR)/full_venturi_usa.mk

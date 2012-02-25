@@ -1,3 +1,8 @@
 #
 # system.prop for venturi_usa
 #
+
+rild.libpath=/system/lib/libsec-ril-apalone.so
+rild.libargs=-d /dev/ttyS0
+ro.sf.lcd_density=240
+
