@@ -98,8 +98,8 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.RunVerifyCachePartitionSize()
 
   script.ShowProgress(0.2, 10)
-  script.BMLWriteRawImage("boot", "boot.img")
-  script.BMLWriteRawImage("recovery", "boot.img")
+  script.EMMCWriteRawImage("/dev/block/mmcblk0p11", "boot.img")
+  script.EMMCWriteRawImage("/dev/block/mmcblk0p12", "boot.img")
 
   script.ShowProgress(0.1, 0)
   device_specific.FullOTA_InstallEnd()

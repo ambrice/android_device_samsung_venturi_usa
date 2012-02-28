@@ -25,11 +25,10 @@ PRODUCT_COPY_FILES := \
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/aries-common/init.aries.rc:root/init.aries.rc \
-	device/samsung/aries-common/lpm.rc:root/lpm.rc \
-	device/samsung/aries-common/ueventd.aries.rc:root/ueventd.aries.rc \
-	device/samsung/aries-common/setupenv.sh:recovery/root/sbin/setupenv.sh
-
+	device/samsung/venturi_usa/init.rc:root/init.rc \
+	device/samsung/venturi_usa/init.smdkc110.rc:root/init.smdkc110.rc \
+	device/samsung/venturi_usa/lpm.rc:root/lpm.rc \
+	device/samsung/venturi_usa/ueventd.rc:root/ueventd.rc
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \

@@ -39,7 +39,7 @@ class EdifyGenerator(edify_generator.EdifyGenerator):
     def RunBackup(self, command):
       edify_generator.EdifyGenerator.RunBackup(self, command)
 
-    def BMLWriteRawImage(self, partition, image):
+    def EMMCWriteRawImage(self, partition, image):
       """Write the given package file into the given partition."""
 
       args = {'partition': partition, 'image': image}
