@@ -28,7 +28,8 @@ PRODUCT_COPY_FILES += \
 	device/samsung/venturi_usa/init.rc:root/init.rc \
 	device/samsung/venturi_usa/init.smdkc110.rc:root/init.smdkc110.rc \
 	device/samsung/venturi_usa/lpm.rc:root/lpm.rc \
-	device/samsung/venturi_usa/ueventd.rc:root/ueventd.rc
+	device/samsung/venturi_usa/ueventd.rc:root/ueventd.rc \
+	device/samsung/venturi_usa/ueventd.smdkc110.rc:root/ueventd.smdkc110.rc
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
@@ -129,6 +130,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# kernel modules for ramdisk
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/samsung/venturi_usa/modules/ramdisk,root/lib/modules)
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/samsung/venturi_usa/modules/ramdisk,recovery/root/lib/modules)
 
 # kernel modules
 PRODUCT_COPY_FILES += $(foreach module,\
