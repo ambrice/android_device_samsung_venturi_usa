@@ -38,8 +38,6 @@ on early-fs
 on fs
     mount tmpfs tmpfs /tmp
     mount ext4 /dev/block/mmcblk0p13 /system wait ro
-    mount rfs /dev/block/mmcblk0p13 /system check=no
-    #mount rfs /dev/block/mmcblk0p13 /system ro remount
 
 #    exec apply_disk_policy
 
@@ -61,16 +59,6 @@ service playlpm /system/bin/playlpm
     user root
     oneshot
 
-service immvibed /system/bin/immvibed 
-    oneshot
-
 service lpmkey /system/bin/charging_mode
     user root
     oneshot
-
-on property:persist.service.adb.enable=1
-    start adbd
-
-#on property:persist.service.adb.enable=0
-#    stop adbd
-
