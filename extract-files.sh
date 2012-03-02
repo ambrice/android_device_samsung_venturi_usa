@@ -59,7 +59,7 @@ adb pull /system/lib/libPVRScopeServices.so ../../../vendor/$MANUFACTURER/$DEVIC
 adb pull /system/lib/libsrv_init.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libsrv_um.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libusc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libActionShot.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary
+adb pull /system/lib/libActionShot.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libarccamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libcamera_client.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -72,7 +72,7 @@ adb pull /system/lib/libPlusMe.so ../../../vendor/$MANUFACTURER/$DEVICE/propriet
 adb pull /system/lib/libs3cjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libseccamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libseccameraadaptor.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libsecjpegencoder.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary
+adb pull /system/lib/libsecjpegencoder.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libtvout.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/lib_tvoutengine.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libtvoutfimc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -145,7 +145,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/gpsd:system/vendor/bin/gpsd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/gps.conf:system/etc/gps.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lights.s5pc110.so:system/lib/hw/lights.s5pc110.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/overlay.s5pc110.so:system/lib/hw/overlay.s5pc110.so \\
 
