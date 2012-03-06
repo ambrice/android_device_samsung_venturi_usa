@@ -20,7 +20,7 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/aries-common/overlay
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
 	device/samsung/venturi_usa/asound.conf:system/etc/asound.conf \
-	device/samsung/aries-common/vold.fstab:system/etc/vold.fstab \
+	device/samsung/venturi_usa/vold.fstab:system/etc/vold.fstab \
 	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg
 
 # Init files

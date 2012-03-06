@@ -130,7 +130,7 @@ on fs
     mount ext4 /dev/block/mmcblk0p14 /dbdata nosuid nodev noatime wait crypt discard,noauto_da_alloc,journal_checksum
 
     # SEC_DMCRYPT for MC_CRYPT_ROOT before apply_disk_policy or apply_sec_devenc_init
-    mount ext4 /dev/block/mmcblk0p1 /efs nosuid nodev noatime wait
+    mount rfs /dev/block/mmcblk0p10 /efs
     chown radio system /efs
     chmod 0771 /efs
 
@@ -290,10 +290,6 @@ on post-fs
     mkdir /system/etc/security/drm 0775
     chown root root /system/etc/security/drm
     chmod 0775 /system/etc/security/drm
-    # Added for testing DIVX DRM
-    mkdir /efs/.android 0775
-    chown radio radio /efs/.android
-    chmod 0775 /efs/.android
 
     # Added for testing WMDRM 
     mkdir /data/data/.drm 0775
