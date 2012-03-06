@@ -43,6 +43,7 @@ lib/hw
 media
 firmware
 vendor/firmware
+vendor/etc
 "
 
 for DIR in $DIRS; do
@@ -59,6 +60,7 @@ cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 lib/libActionShot.so
 lib/libcamera.so
+lib/libs3cjpeg.so
 lib/libarccamera.so
 lib/libcamera_client.so
 lib/libcamerafirmwarejni.so
@@ -89,6 +91,7 @@ lib/libsecril-client.so
 
 etc/gps.conf
 vendor/bin/gpsd
+vendor/etc/gps.xml
 lib/hw/gps.s5pc110.so
 
 bin/pvrsrvinit
@@ -229,7 +232,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \\
     vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \\
     vendor/samsung/__DEVICE__/proprietary/lib/libActionShot.so:system/lib/libActionShot.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libsamsungcamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
@@ -268,6 +272,7 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/vendor/bin/gpsd:system/vendor/bin/gpsd \\
+    vendor/samsung/__DEVICE__/proprietary/vendor/etc/gps.xml:system/vendor/etc/gps.xml \\
     vendor/samsung/__DEVICE__/proprietary/etc/gps.conf:system/etc/gps.conf \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/gps.s5pc110.so:system/lib/hw/gps.s5pc110.so
 
