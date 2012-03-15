@@ -15,7 +15,7 @@
 # These is the hardware-specific overlay, which points to the location
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
-DEVICE_PACKAGE_OVERLAYS := device/samsung/aries-common/overlay
+DEVICE_PACKAGE_OVERLAYS := device/samsung/venturi_usa/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
@@ -49,31 +49,21 @@ PRODUCT_PACKAGES += \
 
 # These are the OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
-	device/samsung/aries-common/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
-	device/samsung/aries-common/media_profiles.xml:system/etc/media_profiles.xml
+	device/samsung/venturi_usa/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
+	device/samsung/venturi_usa/media_profiles.xml:system/etc/media_profiles.xml
 
 # These are the OpenMAX IL modules
 PRODUCT_PACKAGES += \
-	libSEC_OMX_Core.aries \
-	libOMX.SEC.AVC.Decoder.aries \
-	libOMX.SEC.M4V.Decoder.aries \
-	libOMX.SEC.M4V.Encoder.aries \
-	libOMX.SEC.AVC.Encoder.aries
-
-# Misc other modules
-PRODUCT_PACKAGES += \
-	lights.aries \
-	overlay.aries \
-	sensors.aries
+	libSEC_OMX_Core.s5pc110 \
+	libOMX.SEC.AVC.Decoder.s5pc110 \
+	libOMX.SEC.M4V.Decoder.s5pc110 \
+	libOMX.SEC.M4V.Encoder.s5pc110 \
+	libOMX.SEC.AVC.Encoder.s5pc110
 
 # Libs
 PRODUCT_PACKAGES += \
 	libcamera \
 	libstagefrighthw
-
-# apns config file
-PRODUCT_COPY_FILES += \
-        vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Bluetooth MAC Address
 PRODUCT_PACKAGES += \
@@ -81,8 +71,7 @@ PRODUCT_PACKAGES += \
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
-	SamsungServiceMode \
-	AriesParts
+	SamsungServiceMode
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
