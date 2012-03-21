@@ -67,10 +67,11 @@ WIFI_DRIVER_FW_STA_PATH := "/system/etc/wifi/bcm4329_sta.bin"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 BOARD_WEXT_NO_COMBO_SCAN := true
 
-USE_CAMERA_STUB := true
+USE_CAMERA_STUB := false
 ifeq ($(USE_CAMERA_STUB),false)
 BOARD_CAMERA_LIBRARIES := libcamera
 endif
+BOARD_USES_OVERLAY := true
 BOARD_V4L2_DEVICE := /dev/video1
 BOARD_CAMERA_DEVICE := /dev/video0
 BOARD_SECOND_CAMERA_DEVICE := /dev/video2

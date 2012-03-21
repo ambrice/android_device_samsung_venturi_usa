@@ -1,4 +1,4 @@
-ifeq ($(TARGET_DEVICE),epicmtd)
+ifeq ($(TARGET_DEVICE),venturi_usa)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)

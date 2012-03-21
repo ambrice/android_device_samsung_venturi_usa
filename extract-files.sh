@@ -67,7 +67,6 @@ lib/libs3cjpeg.so
 lib/libarccamera.so
 lib/libcamera_client.so
 lib/libcamerafirmwarejni.so
-lib/libcameraservice.so
 lib/libCaMotion.so
 lib/libcaps.so
 lib/libPanoraMax1.so
@@ -121,7 +120,6 @@ lib/hw/sensors.default.so
 lib/hw/copybit.s5pc110.so
 lib/hw/lights.s5pc110.so
 lib/hw/gralloc.s5pc110.so
-lib/hw/overlay.s5pc110.so
 
 bin/playlpm
 bin/charging_mode
@@ -224,7 +222,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsensorservice.so:system/lib/libsensorservice.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/lights.s5pc110.so:system/lib/hw/lights.s5pc110.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/overlay.s5pc110.so:system/lib/hw/overlay.s5pc110.so
 
 #
 # Bluetooth
@@ -245,7 +242,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libCaMotion.so:system/lib/libCaMotion.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcaps.so:system/lib/libcaps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libPanoraMax1.so:system/lib/libPanoraMax1.so \\
