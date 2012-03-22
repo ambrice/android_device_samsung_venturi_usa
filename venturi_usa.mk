@@ -64,7 +64,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libcamera \
 	libstagefrighthw \
-	liboverlay.s5pc110
+	overlay.s5pc110
 
 # Bluetooth MAC Address
 PRODUCT_PACKAGES += \
