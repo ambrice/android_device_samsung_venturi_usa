@@ -111,15 +111,6 @@ loglevel 3
     insmod /lib/modules/rfs_glue.ko
     insmod /lib/modules/rfs_fat.ko
 
-    # ko files for vibrator
-    insmod /lib/modules/vibrator.ko
-
-    # ko files for bthid
-    insmod /lib/modules/bthid.ko
-
-    # ko files for FM Radio
-    insmod /lib/modules/Si4709_driver.ko
-
 on fs
 # mount mtd partitions
     # Mount /system rw first to give the filesystem a chance to save a checkpoint
@@ -138,6 +129,15 @@ on fs
     exec apply_sec_devenc_init
 
     mount debugfs nil /sys/kernel/debug
+
+    # ko files for vibrator
+    insmod /system/lib/modules/vibrator.ko
+
+    # ko files for bthid
+    insmod /system/lib/modules/bthid.ko
+
+    # ko files for FM Radio
+    insmod /system/lib/modules/Si4709_driver.ko
 
 on post-fs
     # verfiy filesystem (UMS)
