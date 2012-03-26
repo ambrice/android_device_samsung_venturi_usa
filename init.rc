@@ -115,10 +115,17 @@ on fs
 # mount mtd partitions
     # Mount /system rw first to give the filesystem a chance to save a checkpoint
     mount ext4 /dev/block/mmcblk0p13 /system wait ro
+    mount rfs  /dev/block/mmcblk0p13 /system check=no
+    mount rfs  /dev/block/mmcblk0p13 /system ro remount
+
     mount ext4 /dev/block/mmcblk0p15 /cache nosuid nodev noatime wait
-    exec check_filesystem /dev/block/mmcblk0p10 ext4
+    mount rfs  /dev/block/mmcblk0p15 /cache nosuid nodev check=no
+
     mount ext4 /dev/block/mmcblk0p16 /data nosuid nodev noatime wait crypt discard,noauto_da_alloc
+    mount rfs  /dev/block/mmcblk0p16 /data nosuid nodev check=no
+
     mount ext4 /dev/block/mmcblk0p14 /dbdata nosuid nodev noatime wait crypt discard,noauto_da_alloc,journal_checksum
+    mount rfs  /dev/block/mmcblk0p14 /dbdata nosuid nodev check=no
 
     # SEC_DMCRYPT for MC_CRYPT_ROOT before apply_disk_policy or apply_sec_devenc_init
     mount rfs /dev/block/mmcblk0p10 /efs
